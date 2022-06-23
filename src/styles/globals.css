@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+.App {
+  align-content: center;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
