@@ -4,7 +4,6 @@ import {EmptyImage, IRectangle} from "../../store/reducers/models";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useActions} from "../../hooks/useAction";
 import {NewImage} from "../../utils/utils";
-import {ExposurePlus1} from "@styled-icons/material-rounded";
 import {fileApi} from "../../api";
 
 
@@ -46,7 +45,6 @@ export function ImageList() {
     fileApi.get(`${id}/download`).then(
       res => {
         let img = new Image()
-
         img.src = res.request.responseURL
         img.crossOrigin = "anonymous"
         img.onload = () => {
@@ -75,11 +73,6 @@ export function ImageList() {
 
   return (
     <ImageListWrapper ref={refImageList} onWheel={handleWheel}>
-      <ImageWrapper>
-        <ExposurePlus1 size={150} onClick={() => {
-          getImage('1')
-        }}/>
-      </ImageWrapper>
       {images.map((image, i) =>
         image.uuid ?
           <ImageWrapper key={i}

@@ -8,7 +8,7 @@ import ImageList from '../components/ImageList'
 import {darkTheme, GlobalStyle, lightTheme} from '../GlobalStyle'
 import {store} from '../store'
 
-const DrawAreaNoSSR = dynamic(
+const DrawArea = dynamic(
   () => import('../components/DrawArea'),
   {
     ssr: false,
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <div className="App">
-            <DrawAreaNoSSR/>
+            <DrawArea/>
             <ImageList/>
           </div>
           <div onClick={themeSwitch} style={{

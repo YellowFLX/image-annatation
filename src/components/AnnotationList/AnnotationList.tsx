@@ -68,16 +68,18 @@ export function AnnotationList({rects, setRects, focus, setFocus, img}: Props) {
             <h2>{rect.label}</h2>
           }
           <datalist id="tag-list">
-            <option value="Авакадо"></option>
+            <option value="Авокадо"></option>
             <option value="Ананас"></option>
             <option value="Апельсин"></option>
             <option value="Банан"></option>
+            <option value="Виноград"></option>
             <option value="Гранат"></option>
             <option value="Груша"></option>
             <option value="Киви"></option>
             <option value="Клубника"></option>
             <option value="Лайм"></option>
             <option value="Лимон"></option>
+            <option value="Фрукты"></option>
             <option value="Яблоко"></option>
           </datalist>
           <ColoredClose size={37} onClick={() => {

@@ -4,9 +4,7 @@ import {Close} from "@styled-icons/material-rounded";
 export const AnnotationListWrapper = styled.div<{ offset: number }>`
   display: flex;
   flex-direction: column;
-  //position: fixed;
   right: 0;
-  //left: calc(100vw - ${props => props.offset}px);
   width: min(100vw, 600px);
   height: 720px;
   background-color: ${props => props.theme.second};

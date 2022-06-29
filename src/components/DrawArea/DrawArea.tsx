@@ -33,18 +33,6 @@ export function DrawArea({setImages}: DrawAreaProps) {
     }, [rects]
   )
 
-
-  // useEffect(() => {
-  //     setImages(
-  //       images.map(image =>
-  //         image.src === currentImage.src
-  //           ? {...image, annotations: rects}
-  //           : image
-  //       ))
-  //   }, [rects]
-  // )
-
-
   const refStage = useRef(null)
   const handleMouseDown = () => {
     setMoving(true)
